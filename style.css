@@ -72,6 +72,14 @@ section, main { scroll-margin-top: 64px; }
   .topnav .home { display: none; }
   .navlinks { display: flex; justify-content: space-between; width: 100%; }
   .navlinks a { margin-left: 0; }
+  .navlinks { gap: 0.75rem; }
+  .navlinks a { white-space: nowrap; }
+  .shot.small { max-width: none; }
+}
+
+@media (max-width: 380px) {
+  .topnav-inner { font-size: 0.9rem; }
+  .navlinks { gap: 0.5rem; }
 }
 
 /* Header */
@@ -84,13 +92,30 @@ h1 {
   margin: 0 0 1.25rem;
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero-text { flex: 1; min-width: 0; }
+
+.avatar {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+}
+
 .intro {
   max-width: 62ch;
   margin: 0 0 0.75rem;
 }
 
 .links { margin: 1.5rem 0 0; }
-.links a { margin-right: 1.4em; }
+.links a { margin-right: 1.4em; white-space: nowrap; }
 
 header { margin-bottom: 4rem; }
 
@@ -130,7 +155,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.12rem;
   font-weight: bold;
   margin: 0;
 }
@@ -187,6 +212,8 @@ footer {
   body { font-size: 16px; }
   main { padding: 70px 16px 48px; }
   h1 { font-size: 1.8rem; }
+  .hero { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; }
+  .avatar { width: 120px; height: 120px; }
   header { margin-bottom: 2.5rem; }
   section { display: block; padding-top: 1.25rem; }
   .row { flex-wrap: wrap; row-gap: 0; column-gap: 1rem; }
