@@ -386,3 +386,31 @@ footer { margin-top: 3rem; }
   .garland-top { top: -66px; }
   .garland-bottom { top: -36px; }
 }
+
+/* Spotify players in Just for fun */
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 560px;
+  margin-top: 1.75rem;
+}
+
+.music-label {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.music-label span { color: var(--accent); margin-right: 0.3em; }
+
+.music {
+  display: block;
+  width: 100%;
+  height: 80px;
+  border: 0;
+  border-radius: 12px;
+}
